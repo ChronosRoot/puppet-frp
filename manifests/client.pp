@@ -8,7 +8,7 @@ class frp::client (
   $path          = $frp::params::client_path,
   $resource      = $frp::params::client_resource,
   $enable        = true,
-  $server_config = {},
+  $server_config = [],
   $configs       = {}
 ) inherits frp::params{
     contain frp::client::install

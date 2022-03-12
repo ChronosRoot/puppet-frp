@@ -5,8 +5,8 @@
 # @example
 #   include frp::client::config
 class frp::client::config {
-  $server_config = $frp::server::server_config
-  $configs       = $frp::server::configs
+  $server_config = $frp::client::server_config
+  $configs       = $frp::client::configs
   $config_path   = $frp::params::server_config_path
   if ! defined(File['/etc/frp']) {
     file {'/etc/frp':
