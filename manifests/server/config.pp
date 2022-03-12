@@ -15,6 +15,6 @@ class frp::server::config {
   file { $config_path :
     content => template('frp/frps.ini.erb'),
     require => File['/etc/frp'],
-    notify  => Service['Frps']
+    notify  => Service['frps']
   }
 }
