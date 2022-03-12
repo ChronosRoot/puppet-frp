@@ -5,4 +5,7 @@
 # @example
 #   include frp::server::install
 class frp::server::install {
+  file { $frp::server::location:
+    source => $frp::server::resource
+  }
 }
