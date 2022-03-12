@@ -5,12 +5,16 @@
 # @example
 #   include frp::server::config
 class frp::server::config {
+  $configs     = $frp::server::configs
+  $config_path = $frp::params::server_config_path
   if ! defined(File['/etc/frp']) {
     file {'/etc/frp':
       ensure => directory,
     }
   }
-  file { $frp::params::server_config_path :
-    content => template('frp/frps.ini.erb')
+  file { $config_path :
+    content => template('frp/frps.ini.erb'),
+    require => File['/etc/frp'],
+    notify  => Service['Frps']
   }
 }

@@ -1,5 +1,5 @@
 [Unit]
-Description=<%= description%>
+Description=<%= @description %>
 After=network.target
 
 [Service]
@@ -7,7 +7,7 @@ Type=simple
 User=nobody
 Restart=on-failure
 RestartSec=5s
-ExecStart=<%= path %> -c <%= @server_config_path %>
+ExecStart=<%= @path %> -c <%= @config_path %>
 LimitNOFILE=1048576
 
 [Install]
