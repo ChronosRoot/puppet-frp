@@ -10,7 +10,7 @@ class frp::server::service {
   $config_path = $frp::params::server_config_path
   file {'frps_service':
     path    => '/etc/systemd/system/frps.service',
-    content => template('frp/frps.service.erb'),
+    content => template('frp/frp.service.erb'),
   }
 
   service { 'Frps':
