@@ -13,7 +13,7 @@ class frp::server::service {
     content => template('frp/frp.service.erb'),
   }
 
-  service { 'Frps':
+  service { 'frps':
     ensure    => $frp::server::enable,
     subscribe => File[$config_path]
   }
