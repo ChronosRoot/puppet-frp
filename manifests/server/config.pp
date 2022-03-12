@@ -11,6 +11,6 @@ class frp::server::config {
     }
   }
   file { $frp::params::server_config_path :
-    content => template('frps.ini.erb')
+    content => template('frp/frps.ini.erb')
   }
 }
