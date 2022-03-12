@@ -6,7 +6,6 @@
 #   include frp::server
 class frp::server (
   $path         = $frp::params::server_path,
-#  $config_path  = $frp::params::server_config_path,
   $resource     = $frp::params::server_resource,
   $enable       = true,
   $configs      = {}

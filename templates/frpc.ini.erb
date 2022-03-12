@@ -1,0 +1,12 @@
+[common]
+<% @server_config.each do |key, value| -%>
+<%= key %> = <%= value %>
+<% end -%>
+
+<% @configs.each do |name, config| -%>
+[<%= name %>]
+<% config.each do |key, value| -%>
+<%= key %> = <%= value %>
+
+<% end -%>
+<% end -%>
