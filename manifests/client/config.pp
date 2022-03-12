@@ -7,7 +7,7 @@
 class frp::client::config {
   $server_config = $frp::client::server_config
   $configs       = $frp::client::configs
-  $config_path   = $frp::params::server_config_path
+  $config_path   = $frp::params::client_config_path
   if ! defined(File['/etc/frp']) {
     file {'/etc/frp':
       ensure => directory,
