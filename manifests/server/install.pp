@@ -5,7 +5,7 @@
 # @example
 #   include frp::server::install
 class frp::server::install {
-  file { $frp::server::location:
+  file { $frp::server::path:
     source => $frp::server::resource
   }
 }
