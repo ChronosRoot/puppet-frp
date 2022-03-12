@@ -6,6 +6,7 @@
 #   include frp::client::install
 class frp::client::install {
   file { $frp::client::path:
-    source => $frp::client::resource
+    source => $frp::client::resource,
+    mode   => '0755',
   }
 }
